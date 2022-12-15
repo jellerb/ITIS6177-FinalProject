@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Translator API</title>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <form action = '/text' method = 'POST'>
+        <table>
+            <tr>
+                <td><label for="inputText">Please input the text you would like to translate</label></td>
+            </tr>
+            <tr>
+                <td><input type="text" id="inputText" name="inputText" ></td>
+            </tr>
+            <tr>
+                <td colspan="2" class = "align-right"><button>Submit</button></td>
+            </tr> 
+        </table>
+
+        <label for="language">Choose a language:</label>
+        <select name="language" id="language">
+            <% data.languages.forEach((lang) => { %>
+            <option value="<%= lang.code %>"><%= lang.name %></option>
+            <%})%>
+        </select>
+    </form>
+  </body>
+</html>
