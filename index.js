@@ -7,8 +7,8 @@ require('dotenv').config()
 const app = express();
 
 
-let port = 3000;
-let host = "localhost";
+let port = 8080;
+let host = "0.0.0.0";
 app.set('view engine', 'ejs');
 app.use(express.static('public'));
 app.use(express.urlencoded({extended: true}));
