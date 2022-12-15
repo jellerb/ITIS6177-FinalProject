@@ -58,11 +58,12 @@ exports.translate = (req, res, next) => {
         }],
         responseType: 'json'
         }).then(function(response){
-            console.log(JSON.stringify(response.data, null, 4));
+            //console.log(JSON.stringify(response.data, null, 4));
             res.send(JSON.stringify(response.data, null, 4))
         })
         .catch((err) => {
             console.log(err);
+            res.redirect('/text');
         })
 };
 
