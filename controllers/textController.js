@@ -67,7 +67,7 @@ exports.translate = (req, res, next) => {
 };
 
 exports.lagnuages = (req, res, next) => {
-
+    let key = process.env.KEY;
     axios({
         baseURL: 'https://api.cognitive.microsofttranslator.com',
         url: '/languages',
